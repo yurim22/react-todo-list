@@ -28,9 +28,9 @@ export const InputBox: React.FC<InputBoxProps> = (props) => {
     <FormContainer onSubmit={onSubmit}>
       <StyledInputBox placeholder="할 일을 입력하세요" onChange={onChange} value={value}> 
       </StyledInputBox>
-      <button type="submit">
+      <EnterButton type="submit">
         <FcDownLeft />
-      </button>
+      </EnterButton>
     </FormContainer>
   );
 };
@@ -48,3 +48,12 @@ const StyledInputBox = styled.input`
   font-weight: 500;
   border-radius: 5px;
 `;
+
+const EnterButton = styled.button`
+  cursor: pointer;
+  border: none;
+  outline: none;
+  svg {
+    font-size: 1rem;
+  }
+`
