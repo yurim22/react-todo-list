@@ -4,6 +4,7 @@ import TodoItem from '../TodoItem/TodoItem';
 
 interface TodoListProps {
     todos: TodoProps[];
+    onDelete: (id: number) => void
 }
 
 interface TodoProps {
@@ -13,12 +14,12 @@ interface TodoProps {
 }
 
 const TodoList: React.FC<TodoListProps> = (props) => {
-    const { todos } = props
-    console.log(todos)
+    const { todos, onDelete } = props;
+    localStorage.setItem('todoList', JSON.stringify(todos))
     return (
         <TodoListContainer>
             {todos.map(todo => 
-                <TodoItem todo={todo}></TodoItem>
+                <TodoItem todo={todo} onDelete={onDelete}></TodoItem>
             )}
         </TodoListContainer>
     )
