@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Container = styled.div`
   width: 30rem;
@@ -11,10 +13,14 @@ const DateNtime = styled.div`
 `
 
 const Clock: React.FC = () => {
-    const today = new Date()
-    console.log(today.toISOString());
+    const [dateState, setDateState] = useState(new Date());
+    
+    useEffect(() => {
+        setInterval(() => setDateState(new Date()), 1000)
+    }, [])
+    
     return (
-        <DateNtime>{today.toISOString()}</DateNtime>
+        <DateNtime>{dateState.toLocaleString()}</DateNtime>
     
     );
 };
