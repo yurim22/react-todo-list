@@ -9,8 +9,8 @@ import { TodoList } from "../TodoList";
 const TodoTemplate: React.FC = () => {
   const [todos, setTodos] = useState([
     {id: 1, text: '운동하기', checked: false},
-    {id: 2, text: 'Juno concept 회의', checked: false},
-    {id: 3, text: 'Juno bug 수정', checked: true},
+    {id: 2, text: 'React 공부하기', checked: false},
+    {id: 3, text: '3시 치과예약', checked: true},
   ])
 
   const nextId = useRef(4);

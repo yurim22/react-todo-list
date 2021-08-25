@@ -42,6 +42,7 @@ const CheckboxIcon = styled.div`
     align-items: center;
     svg {
         font-size: 1.5rem;
+        color : #515E63;
     }
     margin-right: 0.5rem;
 `
@@ -51,7 +52,10 @@ const DeleteIcon = styled.div`
     cursor: pointer;
     svg {
         font-size: 1.5rem;
-        color: #3A4750;
+        color: #515E63;
+        &:hover {
+            color : #3A4750;
+        } 
     }
     display: flex;
     align-items: center;
