@@ -4,6 +4,7 @@ import { RiCheckboxBlankCircleLine, RiCheckboxCircleFill, RiDeleteBin5Fill } fro
 interface TodoItemProps {
     todo: TodoProps;
     onDelete: (id: number) => void;
+    onToggle: (id: number) => void;
 }
 
 interface TodoProps {
@@ -13,13 +14,13 @@ interface TodoProps {
 }
 
 const TodoItem: React.FC<TodoItemProps> = (props) => {
-    const {todo, onDelete} = props;
+    const {todo, onDelete, onToggle} = props;
     return(
         <TodoItemContainer>
-            <CheckboxIcon>
+            <CheckboxIcon onClick={() => {onToggle(todo.id)}}>
                 {todo.checked? <RiCheckboxCircleFill /> : <RiCheckboxBlankCircleLine />}
             </CheckboxIcon>
-            <TextBox>{todo.text}</TextBox>
+            <TextBox checked={todo.checked}>{todo.text}</TextBox>
             <DeleteIcon><RiDeleteBin5Fill onClick={() => {onDelete(todo.id); console.log('delete button', todo.id) }}/></DeleteIcon>
         </TodoItemContainer>
     )
@@ -59,6 +60,7 @@ const DeleteIcon = styled.div`
     margin-right: 0.5rem; 
 `
 
-const TextBox = styled.div`
+const TextBox = styled.div<{checked: boolean}>`
     font-weight: 700;
+    text-decoration: ${({checked}) => (checked ? 'line-through' : 'none')}
 `

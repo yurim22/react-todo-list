@@ -32,11 +32,17 @@ const TodoTemplate: React.FC = () => {
       setTodos(todos.filter(todo => todo.id !== id))
     }, [todos]
   )
+
+  const onToggle = useCallback(
+    (id) => {
+      setTodos(todos.map(todo => todo.id === id ? {...todo, checked: !todo.checked} : todo))
+    }, [todos]
+  )
   return (
     <Container>
         <TodoHead />
         <InputBox onInsert={onInsert}/>    
-        <TodoList todos={todos} onDelete={onDelete}/>
+        <TodoList todos={todos} onDelete={onDelete} onToggle={onToggle}/>
     </Container>);
 };
 
