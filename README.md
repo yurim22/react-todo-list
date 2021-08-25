@@ -34,4 +34,4 @@
 
 ### ⚙️Demo
 
-<img src="https://github.com/yurim22/react-todo-list/blob/main/todo-list.gif" alt="demo-gif" width='200px'/>
+<img src="https://github.com/yurim22/react-todo-list/blob/main/todo-list.gif" alt="demo-gif" width='500px'/>
