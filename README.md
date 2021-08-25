@@ -25,12 +25,12 @@
  ```
 
 ### ⚙️Feature
-✅ 새로운 todo item 추가
-✅ 기존 todo item 삭제
-✅ 완료된 todo item 표시(체크박스 체크)
-✅ 현재 날짜 및 시간 표시
-❎ 기존 todo item 수정
-❎ 새로고침 후에도 등록한 일정이 유지
+✅ 새로운 todo item 추가 <br />
+✅ 기존 todo item 삭제 <br />
+✅ 완료된 todo item 표시(체크박스 체크) <br />
+✅ 현재 날짜 및 시간 표시 <br />
+❎ 기존 todo item 수정 <br />
+❎ 새로고침 후에도 등록한 일정이 유지 <br />
 
 ### ⚙️Demo
 
